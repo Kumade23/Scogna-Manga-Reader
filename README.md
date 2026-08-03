@@ -11,7 +11,7 @@ Benvenuto su **Scogna Manga Reader**! Questa è un'applicazione web creata per f
 - **Ricerca intelligente**: Trova subito il manga che vuoi leggere digitando il titolo.
 - **Libreria e Cronologia**: Salva i manga che ti piacciono nella tua "Libreria" e riprendi la lettura esattamente da dove l'avevi lasciata grazie alla "Cronologia" automatica.
 
-## 🛠️ Come avviare il progetto sul tuo PC (per principianti)
+## 🛠️ Come avviare il progetto sul tuo PC
 
 Se vuoi scaricare questo progetto e farlo funzionare sul tuo computer per fare delle modifiche, segui questi 3 semplici passi:
 
@@ -34,9 +34,3 @@ Se vuoi scaricare questo progetto e farlo funzionare sul tuo computer per fare d
    npm run dev
    ```
    Ti apparirà un link (di solito `http://localhost:5173/`). Cliccaci sopra per vedere il tuo sito aperto nel browser!
-
-## 🌐 Dietro le quinte (Come funziona la magia)
-
-Di solito, quando un sito web cerca di prendere delle immagini o dei dati da un altro server, i browser (come Chrome o Safari) lo bloccano per motivi di sicurezza (un blocco chiamato "CORS"). 
-
-Per evitare questo blocco e far funzionare il sito gratuitamente senza dover pagare e accendere un tuo server privato, questa app utilizza un trucchetto offerto da **Vercel** (il servizio gratuito dove è ospitato il sito). Vercel si occupa di prendere i dati dai server dei manga in modo sicuro e li passa alla tua app senza far arrabbiare il browser. Così tutto funziona in modo fluido, veloce e gratis!
