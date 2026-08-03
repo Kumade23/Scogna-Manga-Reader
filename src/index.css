@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Dark Theme (Default) */
+  --bg-primary: #0a0a0c;
+  --bg-secondary: #141417;
+  --bg-tertiary: #1c1d22;
+  --bg-hover: #26272c;
+  
+  --text-primary: #f0f0f2;
+  --text-secondary: #a0a0a6;
+  --text-tertiary: #6b6c72;
+  
+  --accent-primary: #e63946; /* Deep Crimson */
+  --accent-hover: #f05461;
+  --accent-transparent: rgba(230, 57, 70, 0.15);
+  
+  --border-subtle: #24252a;
+  
+  /* Typography */
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  
+  /* Radii */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+  
+  /* Shadows & Overlays */
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.4);
+  --shadow-md: 0 4px 16px rgba(0,0,0,0.5);
+  --shadow-glow: 0 0 20px rgba(230, 57, 70, 0.3);
+  --glass-bg: rgba(20, 20, 23, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.05);
+  
+  /* Transitions */
+  --trans-fast: 0.15s ease-out;
+  --trans-normal: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+[data-theme='light'] {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f4f4f6;
+  --bg-tertiary: #e6e6e9;
+  --bg-hover: #dcdce0;
+  
+  --text-primary: #121214;
+  --text-secondary: #56565c;
+  --text-tertiary: #8b8b92;
+  
+  --border-subtle: #e6e6e9;
+  
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.06);
+  --shadow-md: 0 4px 16px rgba(0,0,0,0.08);
+  --glass-bg: rgba(255, 255, 255, 0.85);
+  --glass-border: rgba(0, 0, 0, 0.1);
+}
+
+/* Resets */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100vh;
+  height: 100dvh; /* Fix for mobile browser UI bars */
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Lock the body */
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  color: inherit;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+/* Utilities */
+.app-container {
+  display: flex;
+  height: 100vh;
+  height: 100dvh;
+  width: 100%;
+  background-color: var(--bg-primary);
+  overflow: hidden; /* Prevent horizontal/vertical bouncing on app root */
+}
+
+.main-content {
+  flex: 1;
+  height: 100%;
+  min-height: 0; /* Crucial for flex children to allow internal scroll on Safari */
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-y; /* Only allow vertical panning here */
+}
+
+.page-container {
+  padding: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  flex: 1;
+}
+
+/* Glassmorphism */
+.glass-panel {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--bg-hover);
+  border-radius: var(--radius-full);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-tertiary);
+}
