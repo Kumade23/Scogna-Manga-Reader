@@ -18,8 +18,8 @@ Se vuoi scaricare questo progetto e farlo funzionare sul tuo computer per fare d
 1. **Scarica il codice:**
    Usa il terminale per clonare il progetto sul tuo computer:
    ```bash
-   git clone https://github.com/tuo-nome-utente/manga-reader-standalone.git
-   cd manga-reader-standalone
+   git clone https://github.com/Kumade23/Scogna-Manga-Reader.git
+   cd Scogna-Manga-Reader
    ```
 
 2. **Installa i programmi necessari:**
